@@ -1,13 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    @apply bg-green flex items-center justify-center min-h-screen px-4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.quote {
+    @apply bg-white bg-opacity-70 p-8 rounded-3xl w-full lg:max-w-3xl;
+}
+
+.quote-body {
+    @apply font-lobster font-medium text-xl text-black text-center;
+}
+
+.author {
+    @apply text-right mt-2 text-xl text-blue font-roboto font-semibold cursor-pointer;
+}
+
+.tags-list {
+    @apply flex items-center justify-evenly py-4 px-2;
+}
+
+.tag {
+    @apply cursor-pointer px-3 py-1 font-roboto font-normal text-xl bg-blue hover:text-white bg-opacity-40 hover:bg-opacity-100 rounded-xl;
+}
+
+.menu {
+    @apply flex items-center justify-evenly w-full -mt-6;
+}
+
+.button {
+    @apply h-12 w-12 p-2 rounded-full bg-white bg-opacity-70 cursor-pointer;
 }
